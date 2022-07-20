@@ -4,6 +4,7 @@ use App\Http\Controllers\AutoCompleteController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CountryStateCityController;
 use App\Http\Controllers\DisneyplusController;
+use App\Http\Controllers\DropdownController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GoalscorerController;
 use App\Http\Controllers\HighchartController;
@@ -144,3 +145,10 @@ Route::get('autocomplete', [HomeController::class, 'index1']);
 
 
 Route::get('multiple-select',[HomeController::class, 'multipleselect']);
+
+
+
+
+Route::get('dropdown',[DropdownController::class, 'index']);
+Route::get('getState',[DropdownController::class, 'getState'])->name('getState');
+Route::get('getCity',[DropdownController::class, 'getCity'])->name('getCity');
